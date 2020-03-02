@@ -1,3 +1,4 @@
+/********** RESET STYLES *************/
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +6,22 @@
           box-sizing: border-box;
 }
 
-header {
-  background: purple;
+/********** VARIABLES **************/
+/********** REUSABLE ****************/
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/*********** NAV MAIN **************/
+.background-1 {
+  background: #0163b3;
 }
 
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #0163b3;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -40,8 +48,8 @@ nav ul {
 }
 
 nav ul li {
-  background: #f3f3f3;
   display: inline-block;
+  background: #f3f3f3;
   margin-left: 10px;
 }
 
@@ -63,5 +71,39 @@ nav ul li a {
 nav ul li a:hover {
   background: blue;
   color: #f3f3f3;
+}
+
+/************** MEDIA QUERIES ******************/
+@media (max-width: 800px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  nav {
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    width: 100%;
+  }
+  nav ul {
+    background: red;
+    width: 100%;
+  }
+  nav ul li {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+  nav ul li a {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

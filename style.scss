@@ -1,21 +1,31 @@
+/********** RESET STYLES *************/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/********** VARIABLES **************/
 $blue: rgb(1, 99, 179);
 $blueDark: blue;
 $white: #f3f3f3;
 
-header{
-    background: purple;
-    
+/********** REUSABLE ****************/
+
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/*********** NAV MAIN **************/
+
+.background-1{
+    background: $blue;
 }
 
 .header{
     display: flex;
-    background: $blue;
     justify-content: space-between;
     padding: 10px 30px;
     margin: auto;
@@ -27,15 +37,13 @@ header{
 }
 
 nav{
-    
     display: flex;
     align-items: center;
-    ul{ 
-        
+    ul{    
         list-style: none;
-        li{
-            background: #f3f3f3;
+        li{    
             display: inline-block;
+            background: #f3f3f3;
             margin-left: 10px;
             &:first-child{
                 margin-left: 0;
@@ -57,5 +65,38 @@ nav{
     }
 }
 
-//comment
+/************** MEDIA QUERIES ******************/
+
+@media (max-width: 800px){
+
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+    }
+
+    nav{  
+        
+        position: absolute;
+        top: 85px;
+        left: 0px;
+        width: 100%;
+        //max-width: 500px;
+        
+        ul{
+            background: red;
+            width: 100%;
+            
+            li{
+                display: block;
+                margin-left: 0;
+                text-align: center; 
+                a{
+                       width: 100%;
+                }
+            } 
+        } 
+    }
+}
 
